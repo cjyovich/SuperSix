@@ -48,7 +48,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/upArrowImageButton"
+                        android:id="@+id/leftMotorForwardButton"
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="2dp"
@@ -64,7 +64,7 @@
                         android:layout_weight="1" />
 
                     <ImageButton
-                        android:id="@+id/upArrowImageButton3"
+                        android:id="@+id/allMotorsForwardButton"
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="2dp"
@@ -80,7 +80,7 @@
                         android:layout_weight="1" />
 
                     <ImageButton
-                        android:id="@+id/upArrowImageButton2"
+                        android:id="@+id/rightMotorForwardButton"
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="2dp"
@@ -147,7 +147,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/bottomArrowImageButton"
+                        android:id="@+id/leftMotorBackwardButton"
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="2dp"
@@ -165,7 +165,7 @@
                         android:layout_weight="1" />
 
                     <ImageButton
-                        android:id="@+id/bottomArrowImageButton3"
+                        android:id="@+id/allMotorsBackwardButton"
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="2dp"
@@ -183,7 +183,7 @@
                         android:layout_weight="1" />
 
                     <ImageButton
-                        android:id="@+id/bottomArrowImageButton2"
+                        android:id="@+id/rightMotorBackwardButton"
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="2dp"
@@ -219,7 +219,7 @@
                     android:layout_weight="1" />
 
                 <ImageButton
-                    android:id="@+id/upArrowImageButton4"
+                    android:id="@+id/speedUpButton"
                     android:layout_width="55dp"
                     android:layout_height="match_parent"
                     android:layout_margin="2dp"
@@ -236,7 +236,7 @@
                     android:layout_weight="1" />
 
                 <ImageButton
-                    android:id="@+id/bottomArrowImageButton4"
+                    android:id="@+id/speedDownButton"
                     android:layout_width="55dp"
                     android:layout_height="match_parent"
                     android:layout_margin="2dp"

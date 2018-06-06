@@ -55,7 +55,7 @@ public class PadActivity extends UartInterfaceActivity {
     private DataFragment mRetainedDataFragment;
     private int maxPacketsToPaintAsText;
 
-    //private static VerticalSeekBar vsb;
+    //private static VerticalSeekBar vsb; ended up scrapping the slider!
     private static TextView textview; //displays speed
     private int speed = 0; //keeps track of RPMs
 
@@ -74,25 +74,33 @@ public class PadActivity extends UartInterfaceActivity {
             mBufferTextView.setKeyListener(null);     // make it not editable
         }
 
-        //
-        ImageButton upArrowImageButton = (ImageButton) findViewById(R.id.upArrowImageButton);
-        upArrowImageButton.setOnTouchListener(mPadButtonTouchListener);
-        ImageButton bottomArrowImageButton = (ImageButton) findViewById(R.id.bottomArrowImageButton);
-        bottomArrowImageButton.setOnTouchListener(mPadButtonTouchListener);
-        ImageButton upArrowImageButton2 = (ImageButton) findViewById(R.id.upArrowImageButton2);
-        upArrowImageButton2.setOnTouchListener(mPadButtonTouchListener);
-        ImageButton bottomArrowImageButton2 = (ImageButton) findViewById(R.id.bottomArrowImageButton2);
-        bottomArrowImageButton2.setOnTouchListener(mPadButtonTouchListener);
-        ImageButton upArrowImageButton3 = (ImageButton) findViewById(R.id.upArrowImageButton3);
-        upArrowImageButton3.setOnTouchListener(mPadButtonTouchListener);
-        ImageButton bottomArrowImageButton3 = (ImageButton) findViewById(R.id.bottomArrowImageButton3);
-        bottomArrowImageButton3.setOnTouchListener(mPadButtonTouchListener);
-        ImageButton upArrowImageButton4 = (ImageButton) findViewById(R.id.upArrowImageButton4);
-        upArrowImageButton4.setOnTouchListener(mPadButtonTouchListener);
-        ImageButton bottomArrowImageButton4 = (ImageButton) findViewById(R.id.bottomArrowImageButton4);
-        bottomArrowImageButton4.setOnTouchListener(mPadButtonTouchListener);
+        //establish touch listener for all buttons
+        //tag 1
+        ImageButton leftMotorForwardButton = (ImageButton) findViewById(R.id.leftMotorForwardButton);
+        leftMotorForwardButton.setOnTouchListener(mPadButtonTouchListener);
+        //tag 2
+        ImageButton allMotorsForwardButton = (ImageButton) findViewById(R.id.allMotorsForwardButton);
+        allMotorsForwardButton.setOnTouchListener(mPadButtonTouchListener);
+        //tag 3
+        ImageButton rightMotorForwardButton = (ImageButton) findViewById(R.id.rightMotorForwardButton);
+        rightMotorForwardButton.setOnTouchListener(mPadButtonTouchListener);
+        //tag 4
+        ImageButton leftMotorBackwardButton = (ImageButton) findViewById(R.id.leftMotorBackwardButton);
+        leftMotorBackwardButton.setOnTouchListener(mPadButtonTouchListener);
+        //tag 5
+        ImageButton allMotorsBackwardButton = (ImageButton) findViewById(R.id.allMotorsBackwardButton);
+        allMotorsBackwardButton.setOnTouchListener(mPadButtonTouchListener);
+        //tag 6
+        ImageButton rightMotorBackwardButton = (ImageButton) findViewById(R.id.rightMotorBackwardButton);
+        rightMotorBackwardButton.setOnTouchListener(mPadButtonTouchListener);
+        //tag 7
+        ImageButton speedUpButton = (ImageButton) findViewById(R.id.speedUpButton);
+        speedUpButton.setOnTouchListener(mPadButtonTouchListener);
+        //tag 8
+        ImageButton speedDownButton = (ImageButton) findViewById(R.id.speedDownButton);
+        speedDownButton.setOnTouchListener(mPadButtonTouchListener);
 
-        //seekBar();
+        //seekBar(); scrapped slider
 
         // Read shared preferences
         maxPacketsToPaintAsText = PreferencesFragment.getUartTextMaxPackets(this);
@@ -191,7 +199,8 @@ public class PadActivity extends UartInterfaceActivity {
         @Override
         public boolean onTouch(View view, MotionEvent event) {
             final int tag = Integer.valueOf((String) view.getTag());
-            textview = findViewById(R.id.textView2);
+            //textview to display speed
+            textview = findViewById(R.id.textView2); 
             textview.setText(getString(R.string.speed, speed));
             if (event.getAction() == MotionEvent.ACTION_DOWN) {
                 view.setPressed(true);
@@ -219,6 +228,7 @@ public class PadActivity extends UartInterfaceActivity {
         sendDataWithCRC(buffer.array());
     }
 
+    //scrapped method for speed slider
     /*public void seekBar() {
         vsb = findViewById(R.id.seekBar1);
         textview = findViewById(R.id.textView2);
