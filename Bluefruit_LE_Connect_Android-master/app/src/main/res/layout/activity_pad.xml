@@ -1,0 +1,284 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_background"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.adafruit.bluefruit.le.connect.app.PadActivity">
+
+    <LinearLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/topSpacerView"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Directions -->
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/upArrowImageButton"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/roundedbutton"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/shape_triangle"
+                        android:tag="1" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/upArrowImageButton3"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/roundedbutton"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/shape_triangle"
+                        android:tag="2" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/upArrowImageButton2"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/roundedbutton"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/shape_triangle"
+                        android:tag="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:lineSpacingExtra="8sp"
+                        android:text="@string/left_motor"
+                        android:textColor="#f5f5f5"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="165dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="8sp"
+                        android:text="@string/both_motors"
+                        android:textColor="#f5f5f5"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="8sp"
+                        android:text="@string/right_motor"
+                        android:textColor="#f5f5f5"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/bottomArrowImageButton"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight=".8"
+                        android:background="@drawable/roundedbutton"
+
+                        android:rotation="180"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/shape_triangle"
+                        android:tag="4" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/bottomArrowImageButton3"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight=".8"
+                        android:background="@drawable/roundedbutton"
+
+                        android:rotation="180"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/shape_triangle"
+                        android:tag="5" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/bottomArrowImageButton2"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight=".8"
+                        android:background="@drawable/roundedbutton"
+
+                        android:rotation="180"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/shape_triangle"
+                        android:tag="6" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Separator -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.3" />
+
+            <!-- KeyPad -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/upArrowImageButton4"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/roundedbutton"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/pad_arrow_button_up"
+                    android:tag="7"
+                    android:tint="#36b223" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/bottomArrowImageButton4"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight=".8"
+                    android:background="@drawable/roundedbutton"
+
+                    android:rotation="180"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/pad_arrow_button_up"
+                    android:tag="8"
+                    android:tint="#ff0000" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="130dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#f5f5f5"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bottomSpacerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
